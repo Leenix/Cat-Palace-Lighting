@@ -1,0 +1,67 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/leenix/Documents/Cat-Palace-Lighting/include",
+                "/home/leenix/Documents/Cat-Palace-Lighting/src",
+                "/home/leenix/Documents/Cat-Palace-Lighting/lib/RTClib_ID83",
+                "/home/leenix/Documents/Cat-Palace-Lighting/lib/LampControl",
+                "/home/leenix/Documents/Cat-Palace-Lighting/.pio/libdeps/nanoatmega328/LiquidCrystal_ID136",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "/home/leenix/Documents/Cat-Palace-Lighting/.pio/libdeps/nanoatmega328/Ticker_ID1586",
+                "/home/leenix/Documents/Cat-Palace-Lighting/.pio/libdeps/nanoatmega328/ArduinoLog_ID1532",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "/home/leenix/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/leenix/Documents/Cat-Palace-Lighting/include",
+                    "/home/leenix/Documents/Cat-Palace-Lighting/src",
+                    "/home/leenix/Documents/Cat-Palace-Lighting/lib/RTClib_ID83",
+                    "/home/leenix/Documents/Cat-Palace-Lighting/lib/LampControl",
+                    "/home/leenix/Documents/Cat-Palace-Lighting/.pio/libdeps/nanoatmega328/LiquidCrystal_ID136",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "/home/leenix/Documents/Cat-Palace-Lighting/.pio/libdeps/nanoatmega328/Ticker_ID1586",
+                    "/home/leenix/Documents/Cat-Palace-Lighting/.pio/libdeps/nanoatmega328/ArduinoLog_ID1532",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "/home/leenix/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "/home/leenix/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40303",
+                "ARDUINO_AVR_NANO",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/home/leenix/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
