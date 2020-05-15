@@ -20,6 +20,7 @@ bool get_ambient_light_condition();
 void check_lamp_state();
 // void update_lcd();
 float get_current();
+void check_serial();
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -87,8 +88,9 @@ void setup() {
     DateTime now = rtc.now();
     time_of_last_check = millis();
 
-    char current_time[40];
-    sprintf(current_time, "%02d:%02d:%02d", now.hour(), now.minute(), now.second());
+    char current_time[60];
+    sprintf(current_time, "%04d-%02d-%02d %02d:%02d:%02d", now.year(), now.month(), now.day(), now.hour(), now.minute(),
+            now.second());
     Log.notice(F("Time is \t%s\n"), current_time);
 
     char on_time[20];
@@ -114,6 +116,7 @@ void setup() {
 void loop() {
     light.tick();
     lamp_state_task.update();
+    check_serial();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -185,7 +188,33 @@ void check_lamp_state() {
         lights_enabled = new_lamp_state;
     }
 
-    Log.verbose(F("Lamp state: %T\n"), lights_enabled);
+    Log.verbose(F("Lamp state: %T\n\n"), lights_enabled);
+}
+
+void check_serial() {
+    if (Serial.available()) {
+        char command = Serial.read();
+        switch (command) {
+            case 'H':
+                rtc.adjust(rtc.now() + TimeSpan(0, 1, 0, 0));
+                break;
+            case 'h':
+                rtc.adjust(rtc.now() + TimeSpan(0, -1, 0, 0));
+                break;
+            case 'M':
+                rtc.adjust(rtc.now() + TimeSpan(0, 0, 1, 0));
+                break;
+            case 'm':
+                rtc.adjust(rtc.now() + TimeSpan(0, 0, -1, 0));
+                break;
+            case 'S':
+                rtc.adjust(rtc.now() + TimeSpan(0, 0, 0, 1));
+                break;
+            case 's':
+                rtc.adjust(rtc.now() + TimeSpan(0, 0, 0, -1));
+                break;
+        }
+    }
 }
 
 /**

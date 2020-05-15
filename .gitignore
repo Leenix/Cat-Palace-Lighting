@@ -3,3 +3,6 @@
 .gcc-flags.json
 .pioenvs
 .piolibdeps
+.pio/build/*
+.pio/
+.pio/build/nanoatmega328/firmware.hex
